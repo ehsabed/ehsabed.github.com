@@ -1,8 +1,23 @@
-{% capture category %}{{ post.categories | size }}{% endcapture %}
-<h1><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
-<time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span> <span class='year'>%Y</span>"}}</time>
-{% if category != '0' %}
-<footer>
-  <span class="categories">posted in {{ post.categories | category_links }}</span>
-</footer>
-{% endif %}
+{% capture date %}{{ post.date }}{% endcapture %}
+{% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}
+{% unless year == this_year %}
+	{% assign year = this_year %}
+	{% unless forloop.first %}
+		</ul>
+	{% endunless %}
+	<h2 class="year">{{ date | date: "%Y" }}</h2>
+	<ul>
+{% endunless %}
+	<li>
+		<h3 class="title"><a href="{{ post.url }}">{{post.title}}</a></h3>
+		<div class="meta">
+			<span class="date"><time datetime="{{ date | datetime | date_to_xmlschema }}" itemprop="datePublished">{{ date | date: "%b %e" }}</time></span>
+			{% if post.categories.length > 0 %}
+			<span class="tags">{% include post/categories.html %}</span>
+			{% endif %}
+		    {% if site.disqus_short_name and post.comments == true and site.disqus_show_comment_count == true %}
+		    {% include post/comments_link.html %}
+		    {% endif %}
+		    <span class="edit">{% include post/edit.html %}</span>
+		</div>
+	</li>
