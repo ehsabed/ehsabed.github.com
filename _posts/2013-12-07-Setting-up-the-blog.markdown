@@ -5,7 +5,7 @@ date: 2013-12-07 19:40
 comments: true
 external-url:
 categories: [blog, jekyll]
-published: false
+published: true
 ---
 I had started e few months ago setting up this blog on [Github](http://github.com "GitHub"). But then I really not got around to finish it. After reading a few blogposts about [Jekyll](http://jekyllrb.com/ "Jekyll") and [Github](http://github.com) I decided that now was the time.
 
@@ -19,4 +19,14 @@ One thing I noticed was that when I started setting up the blog, Github used <co
 
 Since I have a domain-name that I want to use with this blog, I followed the instructions for setting up a custom domain-name at [Github's helppages](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). I'm using a subdomain, so setting up <b>CNAME record</b> did the trick.
 
+In case anyone wants to leave any comments, I'm using [Disqus](http://disqus.com/ "Disqus").
 
+For RSS feed, [Feedburner](http://feedburner.com/ "Feedburner") is a nice alternative.
+
+Now the blog is live, but I'll probably have to do some cleaning and modifications since I haven't really gone through all files and settings. So what's left is:
+
+* Design. It is not very unique...
+* Figure out where to store images. In the Github repository?
+* Find the work process that suits me. Right now I edit posts in the browser and maybe that is all I need?
+
+There are probably more issues to consider, but I'll handle them as they show up.
