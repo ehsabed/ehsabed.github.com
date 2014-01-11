@@ -214,6 +214,11 @@ a {
     border: 1px solid #afb6ca;
 }
 #sub-nav .social a.github:hover { border: 1px solid #909ab6 }
+#sub-nav .social a.linkedind {
+    background: url('/images/social/linkedind.png?1385702818') center no-repeat #afb6ca;
+    border: 1px solid #afb6ca;
+}
+#sub-nav .social a.linkedind:hover { border: 1px solid #909ab6 }
 #sub-nav .social a.rss {
     background: url('/images/social/rss.png?1385702818') center no-repeat #ef7522;
     border: 1px solid #EF7522;
