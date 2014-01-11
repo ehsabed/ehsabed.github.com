@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Fixing blog issues"
+date: 2014-01-11 12:00
+comments: true
+external-url:
+categories: [blog, jekyll]
+published: false
+---
+
+As I wrote in my last post, there were some issues with my initial blog setup.
